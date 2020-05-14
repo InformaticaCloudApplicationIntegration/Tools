@@ -22,7 +22,7 @@ Tag mode value can be either "-s" or "-a". It controls how the tool uses tags to
 - If you use "-s", a single tag is used for grouping. This means that from each operation, we take first tag found and use it to decide to which group we should copy it, all other present tags are ignored;
 - If you use "-a", we take into account all present tags for each operation;
 	
-Example> java -jar SwaggerSplitter.jar -s swagger.json
+**Example>** *java -jar SwaggerSplitter.jar -s swagger.json*
 
 The tool also creates an emtpy folder "output_swaggers_<source_file_name>" in the same folder as the input JSON file and uses it to store all generated Swagger files. Please note that if such folder already exists, the tool will fail.
 
