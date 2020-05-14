@@ -14,7 +14,7 @@ In case you want to import a swagger to create a Service Connector, it may be cu
 
 ## How do we use this tool
 
-In order to run the tool you need to use java -jar command in your command line. The tool acceps two input parameters:
+In order to run the tool you need to use java -jar command in your command line. The tool accepts two input parameters:
 - tag handling mode
 - input file path
 	
