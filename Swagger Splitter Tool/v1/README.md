@@ -10,7 +10,7 @@ As this utility lets you split one **huge** swagger files into many **smaller, t
 
 There is one such way to create an API Client in [Cloud Application Integration Service](https://www.informatica.com/products/cloud-integration/cloud-application-integration.html) (Cloud Service available as part of [Informatica Intelligent Cloud Services](https://www.informatica.com/products/cloud-integration.html), Informatica's iPaas). It is called Service Connector and it let's you create connectivity to a third-party system on the fly using importing swagger or a WSDL file (Obviously, you can also create an API Client by defining actions manually).
 
-In case you want to import a swagger to create a Service Connector, it may be cumbersome if the swagger is huge. You cna then split the swagger using this tool and create multiple Service Connectors. By the way, we have already published a registry of pre-created Service Connectors in [Cloud Application Integration Community](https://network.informatica.com/community/informatica-network/products/cloud-integration/cloud-application-integration/). You can access them [here](https://network.informatica.com/community/informatica-network/products/cloud-integration/cloud-application-integration/blog/2018/10/16/registry-of-service-connectors-your-gateway-to-building-composite-api-using-cloud-application-integration)
+In case you want to import a swagger to create a Service Connector, it may be cumbersome if the swagger is huge. You can then split the swagger using this tool and create multiple Service Connectors. By the way, we have already published a registry of pre-created Service Connectors in [Cloud Application Integration Community](https://network.informatica.com/community/informatica-network/products/cloud-integration/cloud-application-integration/). You can access them [here](https://network.informatica.com/community/informatica-network/products/cloud-integration/cloud-application-integration/blog/2018/10/16/registry-of-service-connectors-your-gateway-to-building-composite-api-using-cloud-application-integration)
 
 ## How do we use this tool
 
@@ -26,7 +26,7 @@ Example> java -jar SwaggerSplitter.jar -s swagger.json
 
 The tool also creates an emtpy folder "output_swaggers_<source_file_name>" in the same folder as the input JSON file and uses it to store all generated Swagger files (Please note that if such folder already exists, the tool will fail).
 
-Each generated swagger file has the following name format "<soruce_file_name>_tags_\[<tag(s)_used_to_generate_this_file>\].json.
+Each generated swagger file is created with the filename as "<soruce_file_name>_tags_\[<tag(s)_used_to_generate_this_file>\].json.
 Each generated swagger file will contain only operations that were selected by some tag and type definitions used in them.
 
 
