@@ -24,7 +24,7 @@ Tag mode value can be either "-s" or "-a". It controls how the tool uses tags to
 	
 Example> java -jar SwaggerSplitter.jar -s swagger.json
 
-The tool also creates an emtpy folder "output_swaggers_<source_file_name>" in the same folder as the input JSON file and uses it to store all generated Swagger files (Please note that if such folder already exists, the tool will fail).
+The tool also creates an emtpy folder "output_swaggers_<source_file_name>" in the same folder as the input JSON file and uses it to store all generated Swagger files. Please note that if such folder already exists, the tool will fail.
 
 Each generated swagger file is created with the filename as "<source_file_name>_tags_\[<tag(s)_used_to_generate_this_file>\].json.
 Each generated swagger file will contain only operations that were selected by some tag and type definitions used in them.
