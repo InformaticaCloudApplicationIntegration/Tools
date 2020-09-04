@@ -9,8 +9,8 @@ openssl base64 -d -in <signature> -out /tmp/sign.sha256
 openssl dgst -sha256 -verify <(openssl x509 -in <cert> -pubkey -noout) -signature /tmp/sign.sha256 <file>
 
 Where:
-<signature> is the file containing the signature in Base64, 
-<cert> is the code signing certificate, and
-<file>is the file to verify.
-
+  <signature> is the file containing the signature in Base64, 
+  <cert> is the code signing certificate, and
+  <file>is the file to verify.
+    
 Based on verification process, OpenSSL displays a success or error message to validate if the installer code is genuine or not.
