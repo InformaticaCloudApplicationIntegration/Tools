@@ -13,4 +13,4 @@ Where:
   <cert> is the code signing certificate, and
   <file>is the file to verify.
     
-Based on verification process, OpenSSL displays a success or error message to validate if the installer code is genuine or not.
+Based on verification process, OpenSSL displays a success or error message to validate if the code is genuine or not.
