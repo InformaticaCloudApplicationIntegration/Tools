@@ -1,11 +1,16 @@
-# APIMATIC
+You can access code signing certificate [here](https://github.com/InformaticaCloudApplicationIntegration/Tools/tree/master/IICS%20Asset%20Management%20CLI/certificates/)
 
-APIMATIC is a developer experience platform for web APIs.
+You can validate the integrity of digitally signed binaries using any available tools, such as OpenSSL.
 
-General information on APIMATIC can be found [here](https://www.apimatic.io/).
+For instance, 
 
-## Table of Contents
+If you have to verify the package authentication and confirm the code security, enter the following OpenSSL commands:
+openssl base64 -d -in <signature> -out /tmp/sign.sha256
+openssl dgst -sha256 -verify <(openssl x509 -in <cert> -pubkey -noout) -signature /tmp/sign.sha256 <file>
 
-| Name  | Description | Specification | Service Connector |
-| ------------- | ------------- | ------------- | ------------- |
-| APIMATIC API Transformer REST API v1  | Transform API Descriptions from/to various formats |  APIMATIC API Transformer REST API v1.json | APIMATIC API Transformer REST API v1.zip |
+Where:
+<signature> is the file containing the signature in Base64, 
+<cert> is the code signing certificate, and
+<file>is the file to verify.
+
+Based on verification process, OpenSSL displays a success or error message to validate if the installer code is genuine or not.
