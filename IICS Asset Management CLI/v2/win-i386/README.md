@@ -6,7 +6,7 @@ For instance,
 
 If you have to verify the package authentication and confirm the code security, enter the following OpenSSL commands:  
 openssl base64 -d -in `<signature>` -out /tmp/sign.sha256  
-openssl dgst -sha256 -verify <(openssl x509 -in `<cert>` -pubkey -noout) -signature /tmp/sign.sha256 `<file>`
+openssl dgst -sha256 -verify (openssl x509 -in `<cert>` -pubkey -noout) -signature /tmp/sign.sha256 `<file>`
 
 Where:  
   `<signature>` is the file containing the signature in Base64,  
